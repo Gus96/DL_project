@@ -10,7 +10,7 @@ https://github.com/Gus96/DL_project.git
 3. Помещаем модель в проект (копируем и помещаем в папку models)
 4. В терминале переходим в репозиторий:
 ```
-cd ESRGAN
+cd  DL_project\ESRGAN
 ```
 5. Собираем докер:
 ```
