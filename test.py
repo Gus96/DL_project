@@ -35,3 +35,19 @@ for path in glob.glob(test_img_folder):
     output = np.transpose(output[[2, 1, 0], :, :], (1, 2, 0))
     output = (output * 255.0).round()
     cv2.imwrite('results/{:s}_rlt.png'.format(base), output)
+
+from PIL import Image
+from imagehash import dhash
+
+image1 = dhash(Image.open('baboon_res.png'))
+image2 = dhash(Image.open('results/' + 'baboon_rlt.png'))
+
+flag = False
+
+if image1 == image2:
+    flag = True
+
+if flag:
+    print('Test passed! Images are equal')
+else:
+    print('Wrong')

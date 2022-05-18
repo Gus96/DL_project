@@ -1,8 +1,5 @@
 from ubuntu:20.04
 
-#ARG DEBIAN_FRONTEND=noninteractive
-#ENV DEBIAN_FRONTEND noninteractive
-
 RUN apt-get update
 #RUN apt-get install -y python3.10
 #RUN pip install opencv-python
@@ -21,4 +18,4 @@ RUN pip install imagehash
 
 COPY . .
 CMD ["python3", "test.py"]
-CMD ["python3", "pic_compar.py"]
+#CMD ["python3", "pic_compar.py"]
